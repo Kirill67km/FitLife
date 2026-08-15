@@ -1,5 +1,9 @@
 # Проект FitLife - MVP версия 1.0
 
+# Неизменяемые величины
+WATER_ML_PER_KG = 30
+ML_PER_LITER = 1000
+
 # 1. Знакомство
 user_name = input(
     "Привет, я - спортивный бот, как я могу к тебе обращаться?\n"
@@ -22,8 +26,8 @@ user_height = float(
 )
 
 # 3. Логика расчетов
-bmi_value_round = round(user_weight / (user_height**2), 1)
-water_l = user_weight * 30 / 1000
+bmi_value_round = round(user_weight / (user_height ** 2), 1)
+water_l = user_weight * WATER_ML_PER_KG / ML_PER_LITER
 
 
 # 4. Вывод красивого результата
